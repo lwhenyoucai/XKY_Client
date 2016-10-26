@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.nanshan.xky_client.MainActivity" >
+
+    
+    <item
+        android:id="@+id/action_jiaoxue"
+        android:orderInCategory="100"
+        android:title="@string/action_jiaoxue"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_jiaowu"
+        android:orderInCategory="100"
+        android:title="@string/action_jiaowu"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_student"
+        android:orderInCategory="100"
+        android:title="@string/action_student"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+
+</menu>

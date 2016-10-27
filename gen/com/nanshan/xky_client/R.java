@@ -16,6 +16,9 @@ public final class R {
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
     }
+    public static final class array {
+        public static final int num_cols=0x7f0c0000;
+    }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -223,6 +226,34 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int backgroundStacked=0x7f010030;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindOffset=0x7f010071;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindScrollScale=0x7f010073;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int behindWidth=0x7f010072;
         /**  A style that may be applied to Buttons placed within a
          LinearLayout with the style buttonBarStyle to form a button bar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -318,6 +349,22 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int expandActivityOverflowButtonDrawable=0x7f01006b;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeDegree=0x7f010079;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int fadeEnabled=0x7f010078;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -457,6 +504,17 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int logo=0x7f01002d;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int mode=0x7f01006e;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
 <table>
@@ -618,6 +676,32 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int selectableItemBackground=0x7f010019;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int selectorDrawable=0x7f01007b;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int selectorEnabled=0x7f01007a;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int shadowDrawable=0x7f010076;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int shadowWidth=0x7f010077;
         /**  How this item should display in the Action Bar, if present. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -749,6 +833,36 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int titleTextStyle=0x7f01002a;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeAbove=0x7f010074;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+         */
+        public static final int touchModeBehind=0x7f010075;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewAbove=0x7f01006f;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int viewBehind=0x7f010070;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -988,6 +1102,8 @@ containing a value of this type.
          (the screen is in portrait). This may be either a fraction or a dimension.
          */
         public static final int dialog_fixed_width_minor=0x7f080012;
+        public static final int shadow_width=0x7f080018;
+        public static final int slidingmenu_offset=0x7f080017;
     }
     public static final class drawable {
         public static final int a=0x7f020000;
@@ -1091,82 +1207,97 @@ containing a value of this type.
         public static final int item_06=0x7f020062;
         public static final int item_07=0x7f020063;
         public static final int logo=0x7f020064;
-        public static final int shape_point_normal=0x7f020065;
-        public static final int shape_point_selected=0x7f020066;
-        public static final int shape_point_selector=0x7f020067;
+        public static final int shadow=0x7f020065;
+        public static final int shadowright=0x7f020066;
+        public static final int shape_point_normal=0x7f020067;
+        public static final int shape_point_selected=0x7f020068;
+        public static final int shape_point_selector=0x7f020069;
     }
     public static final class id {
-        public static final int action_bar=0x7f05001c;
+        public static final int action_bar=0x7f050021;
         public static final int action_bar_activity_content=0x7f050015;
-        public static final int action_bar_container=0x7f05001b;
-        public static final int action_bar_overlay_layout=0x7f05001f;
-        public static final int action_bar_root=0x7f05001a;
-        public static final int action_bar_subtitle=0x7f050023;
-        public static final int action_bar_title=0x7f050022;
-        public static final int action_context_bar=0x7f05001d;
-        public static final int action_jiaowu=0x7f050045;
-        public static final int action_jiaoxue=0x7f050044;
+        public static final int action_bar_container=0x7f050020;
+        public static final int action_bar_overlay_layout=0x7f050024;
+        public static final int action_bar_root=0x7f05001f;
+        public static final int action_bar_subtitle=0x7f050028;
+        public static final int action_bar_title=0x7f050027;
+        public static final int action_context_bar=0x7f050022;
+        public static final int action_guanyu=0x7f050053;
         public static final int action_menu_divider=0x7f050016;
         public static final int action_menu_presenter=0x7f050017;
-        public static final int action_mode_close_button=0x7f050024;
-        public static final int action_settings=0x7f050047;
-        public static final int action_student=0x7f050046;
-        public static final int activity_chooser_view_content=0x7f050025;
+        public static final int action_mode_close_button=0x7f050029;
+        public static final int action_settings=0x7f050054;
+        public static final int activity_chooser_view_content=0x7f05002a;
         public static final int always=0x7f05000b;
         public static final int beginning=0x7f050011;
-        public static final int checkbox=0x7f05002d;
+        public static final int checkbox=0x7f050032;
         public static final int collapseActionView=0x7f05000d;
-        public static final int default_activity_button=0x7f050028;
+        public static final int default_activity_button=0x7f05002d;
         public static final int dialog=0x7f05000e;
         public static final int disableHome=0x7f050008;
         public static final int dropdown=0x7f05000f;
-        public static final int edit_query=0x7f050030;
+        public static final int edit_query=0x7f050035;
         public static final int end=0x7f050013;
-        public static final int expand_activities_button=0x7f050026;
-        public static final int expanded_menu=0x7f05002c;
+        public static final int expand_activities_button=0x7f05002b;
+        public static final int expanded_menu=0x7f050031;
+        public static final int fragmentMainActivity=0x7f050041;
+        public static final int fragmentsecond=0x7f050048;
+        public static final int fullscreen=0x7f05001d;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
-        public static final int icon=0x7f05002a;
+        public static final int icon=0x7f05002f;
         public static final int ifRoom=0x7f05000a;
-        public static final int image=0x7f050027;
+        public static final int image=0x7f05002c;
+        public static final int imageleft=0x7f05004e;
+        public static final int imageuttonleftout=0x7f050051;
+        public static final int imageuttonleftset=0x7f050050;
+        public static final int left=0x7f05001a;
+        public static final int leftmenu=0x7f05004c;
         public static final int listMode=0x7f050001;
-        public static final int listView1=0x7f05003f;
-        public static final int list_item=0x7f050029;
-        public static final int ll_container=0x7f05003e;
+        public static final int listView1=0x7f050045;
+        public static final int listViewleft=0x7f05004f;
+        public static final int list_item=0x7f05002e;
+        public static final int ll_container=0x7f050044;
+        public static final int margin=0x7f05001c;
         public static final int middle=0x7f050012;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
-        public static final int radio=0x7f05002f;
-        public static final int search_badge=0x7f050032;
-        public static final int search_bar=0x7f050031;
-        public static final int search_button=0x7f050033;
-        public static final int search_close_btn=0x7f050038;
-        public static final int search_edit_frame=0x7f050034;
-        public static final int search_go_btn=0x7f05003a;
-        public static final int search_mag_icon=0x7f050035;
-        public static final int search_plate=0x7f050036;
-        public static final int search_src_text=0x7f050037;
-        public static final int search_voice_btn=0x7f05003b;
-        public static final int shortcut=0x7f05002e;
+        public static final int radio=0x7f050034;
+        public static final int right=0x7f05001b;
+        public static final int search_badge=0x7f050037;
+        public static final int search_bar=0x7f050036;
+        public static final int search_button=0x7f050038;
+        public static final int search_close_btn=0x7f05003d;
+        public static final int search_edit_frame=0x7f050039;
+        public static final int search_go_btn=0x7f05003f;
+        public static final int search_mag_icon=0x7f05003a;
+        public static final int search_plate=0x7f05003b;
+        public static final int search_src_text=0x7f05003c;
+        public static final int search_voice_btn=0x7f050040;
+        public static final int selected_view=0x7f05001e;
+        public static final int shortcut=0x7f050033;
         public static final int showCustom=0x7f050007;
         public static final int showHome=0x7f050004;
         public static final int showTitle=0x7f050006;
-        public static final int split_action_bar=0x7f05001e;
-        public static final int submit_area=0x7f050039;
+        public static final int split_action_bar=0x7f050023;
+        public static final int submit_area=0x7f05003e;
         public static final int tabMode=0x7f050002;
-        public static final int text1=0x7f050040;
-        public static final int text2=0x7f050041;
-        public static final int textMiaoshu=0x7f050042;
-        public static final int title=0x7f05002b;
-        public static final int top_action_bar=0x7f050020;
-        public static final int tv_title=0x7f05003d;
-        public static final int up=0x7f050021;
+        public static final int text1=0x7f050046;
+        public static final int text2=0x7f050047;
+        public static final int textMiaoshu=0x7f05004a;
+        public static final int textViewlistmenu=0x7f05004d;
+        public static final int textfragmentfirst=0x7f050049;
+        public static final int textwangzhi=0x7f05004b;
+        public static final int title=0x7f050030;
+        public static final int top_action_bar=0x7f050025;
+        public static final int tv_title=0x7f050043;
+        public static final int up=0x7f050026;
         public static final int useLogo=0x7f050003;
-        public static final int vp_pager=0x7f05003c;
-        public static final int webView1=0x7f050043;
+        public static final int vp_pager=0x7f050042;
+        public static final int webView1=0x7f050052;
         public static final int withText=0x7f05000c;
     }
     public static final class integer {
@@ -1221,12 +1352,16 @@ containing a value of this type.
         public static final int abc_simple_decor=0x7f030017;
         public static final int activity_main=0x7f030018;
         public static final int activity_shanye=0x7f030019;
-        public static final int item=0x7f03001a;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001b;
-        public static final int webview=0x7f03001c;
+        public static final int fragment_first=0x7f03001a;
+        public static final int item=0x7f03001b;
+        public static final int leftmenu=0x7f03001c;
+        public static final int list_item_leftmenu=0x7f03001d;
+        public static final int list_left_menu=0x7f03001e;
+        public static final int support_simple_spinner_dropdown_item=0x7f03001f;
+        public static final int webview=0x7f030020;
     }
     public static final class menu {
-        public static final int main=0x7f0c0000;
+        public static final int main=0x7f0d0000;
     }
     public static final class string {
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
@@ -1269,10 +1404,8 @@ containing a value of this type.
         /**  Description of a share target (both in the list of such or the default share button) in a ShareActionProvider (share UI). [CHAR LIMIT=NONE] 
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
-        public static final int action_jiaowu=0x7f0a0010;
-        public static final int action_jiaoxue=0x7f0a000f;
-        public static final int action_settings=0x7f0a0012;
-        public static final int action_student=0x7f0a0011;
+        public static final int action_guanyu=0x7f0a000f;
+        public static final int action_settings=0x7f0a0010;
         public static final int app_name=0x7f0a000d;
         public static final int hello_world=0x7f0a000e;
     }
@@ -2798,6 +2931,243 @@ containing a value of this type.
           @attr name com.nanshan.xky_client:queryHint
         */
         public static final int SearchView_queryHint = 4;
+        /** Attributes that can be used with a SlidingMenu.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SlidingMenu_behindOffset com.nanshan.xky_client:behindOffset}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindScrollScale com.nanshan.xky_client:behindScrollScale}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_behindWidth com.nanshan.xky_client:behindWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeDegree com.nanshan.xky_client:fadeDegree}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_fadeEnabled com.nanshan.xky_client:fadeEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_mode com.nanshan.xky_client:mode}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorDrawable com.nanshan.xky_client:selectorDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_selectorEnabled com.nanshan.xky_client:selectorEnabled}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowDrawable com.nanshan.xky_client:shadowDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_shadowWidth com.nanshan.xky_client:shadowWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeAbove com.nanshan.xky_client:touchModeAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_touchModeBehind com.nanshan.xky_client:touchModeBehind}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewAbove com.nanshan.xky_client:viewAbove}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlidingMenu_viewBehind com.nanshan.xky_client:viewBehind}</code></td><td></td></tr>
+           </table>
+           @see #SlidingMenu_behindOffset
+           @see #SlidingMenu_behindScrollScale
+           @see #SlidingMenu_behindWidth
+           @see #SlidingMenu_fadeDegree
+           @see #SlidingMenu_fadeEnabled
+           @see #SlidingMenu_mode
+           @see #SlidingMenu_selectorDrawable
+           @see #SlidingMenu_selectorEnabled
+           @see #SlidingMenu_shadowDrawable
+           @see #SlidingMenu_shadowWidth
+           @see #SlidingMenu_touchModeAbove
+           @see #SlidingMenu_touchModeBehind
+           @see #SlidingMenu_viewAbove
+           @see #SlidingMenu_viewBehind
+         */
+        public static final int[] SlidingMenu = {
+            0x7f01006e, 0x7f01006f, 0x7f010070, 0x7f010071,
+            0x7f010072, 0x7f010073, 0x7f010074, 0x7f010075,
+            0x7f010076, 0x7f010077, 0x7f010078, 0x7f010079,
+            0x7f01007a, 0x7f01007b
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#behindOffset}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:behindOffset
+        */
+        public static final int SlidingMenu_behindOffset = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#behindScrollScale}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:behindScrollScale
+        */
+        public static final int SlidingMenu_behindScrollScale = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#behindWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:behindWidth
+        */
+        public static final int SlidingMenu_behindWidth = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#fadeDegree}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:fadeDegree
+        */
+        public static final int SlidingMenu_fadeDegree = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#fadeEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:fadeEnabled
+        */
+        public static final int SlidingMenu_fadeEnabled = 10;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#mode}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>left</code></td><td>0</td><td></td></tr>
+<tr><td><code>right</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.nanshan.xky_client:mode
+        */
+        public static final int SlidingMenu_mode = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#selectorDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.nanshan.xky_client:selectorDrawable
+        */
+        public static final int SlidingMenu_selectorDrawable = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#selectorEnabled}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:selectorEnabled
+        */
+        public static final int SlidingMenu_selectorEnabled = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#shadowDrawable}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.nanshan.xky_client:shadowDrawable
+        */
+        public static final int SlidingMenu_shadowDrawable = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#shadowWidth}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.nanshan.xky_client:shadowWidth
+        */
+        public static final int SlidingMenu_shadowWidth = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#touchModeAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.nanshan.xky_client:touchModeAbove
+        */
+        public static final int SlidingMenu_touchModeAbove = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#touchModeBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>margin</code></td><td>0</td><td></td></tr>
+<tr><td><code>fullscreen</code></td><td>1</td><td></td></tr>
+</table>
+          @attr name com.nanshan.xky_client:touchModeBehind
+        */
+        public static final int SlidingMenu_touchModeBehind = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#viewAbove}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.nanshan.xky_client:viewAbove
+        */
+        public static final int SlidingMenu_viewAbove = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.nanshan.xky_client.R.attr#viewBehind}
+          attribute's value can be found in the {@link #SlidingMenu} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.nanshan.xky_client:viewBehind
+        */
+        public static final int SlidingMenu_viewBehind = 2;
         /** Attributes that can be used with a Spinner.
            <p>Includes the following attributes:</p>
            <table>

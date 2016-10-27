@@ -11,6 +11,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import slidingMenu.SlidingMenu;
+import slidingMenu_left.MyFragment;
+import zhuchild.WebView_xianshi;
 import android.R.integer;
 import android.os.Bundle;
 import android.os.Message;
@@ -22,6 +25,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -40,7 +44,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 	
 	ListView listView;
 	List<Map< String,Object>> list1;
@@ -80,9 +84,6 @@ public class MainActivity extends Activity {
 	
 				// 继续发送延时2秒的消息, 形成类似递归的效果, 使广告一直循环切换
 				mHandler.sendEmptyMessageDelayed(0, 2000);
-				
-			
-			
 		};
 	};
 
@@ -90,59 +91,48 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+//<<<<<<<<<<<<<<------侧滑菜单设置---------->>>>>>>>>>>>>>>>>>	
+		
+		// 侧滑菜单设置 
+        SlidingMenu menu = new SlidingMenu(this);  
+        menu.setMode(SlidingMenu.LEFT);  
+        // 设置触摸屏幕的模式  
+        menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);  
+        menu.setShadowWidthRes(R.dimen.shadow_width);  
+        menu.setShadowDrawable(R.drawable.shadow);  
+  
+        // 设置滑动菜单视图的宽度  
+        menu.setBehindOffsetRes(R.dimen.slidingmenu_offset);  
+        // 设置渐入渐出效果的值  
+        menu.setFadeDegree(0.5f);  
+        /** 
+         * SLIDING_WINDOW will include the Title/ActionBar in the content 
+         * section of the SlidingMenu, while SLIDING_CONTENT does not. 
+         */  
+//        menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);////高度在ActionBar之下 
+        menu.attachToActivity(this, SlidingMenu.SLIDING_WINDOW); //高度超过ActionBar 
+        //为侧滑菜单设置布局  
+        menu.setMenu(R.layout.leftmenu); 
+        MyFragment fragment = new MyFragment();
+        fragment.setContext(this);
+        getSupportFragmentManager().beginTransaction().replace(R.id.leftmenu, fragment).commit();
+//        menu.toggle();//初始化时展现左侧滑菜单
+        menu.setFadeEnabled(true);//设置SlidingMenu是否淡入/淡出
+        
+//<<<<<<<<<<<<<<<<--------图片轮播实现代码------->>>>>>>>>>>>>>>>>>    
+		
+		
 		mViewPager = (ViewPager) findViewById(R.id.vp_pager);
 		tvTitle = (TextView) findViewById(R.id.tv_title);
 		llContainer = (LinearLayout) findViewById(R.id.ll_container);
 		listView=(ListView) findViewById(R.id.listView1);
-		
+		getWebData(list1);
 		
 		mViewPager.setAdapter(new MyAdapter());// 给viewpager设置数据
 		// mViewPager.setCurrentItem(Integer.MAX_VALUE/2);
 		mViewPager.setCurrentItem(mImageIds.length * 10000);
-		Thread t = new Thread(){
-					
-					public void run(){
-						
-						List<Map< String,Object>> list=new ArrayList<Map< String,Object>>();
-						int i=0;
-						Data data = new Data();
-						
-						Document doc;
-						try {
-							doc = (Document)Jsoup.connect(path).timeout(3000).get();
-							
-							Element element = doc.getElementById("xygg_div");
-							
-							Elements el = element.select("a");
-							
-							for(Element el0:el){
-								Map<String, Object> map = new HashMap<String, Object>();
-								String text=el0.text();
-								String link=el0.attr("href");
-								data.setlink(link);
-								data.setText(text);
-								map.put("up", data.getText());
-								
-								map.put("down", imageItem[i]);
-								i++;
-								list.add(map);
-							}
-							
-							Message msg = Message.obtain();
-							msg.what=1;
-							msg.obj=list;
-							mHandler.sendMessage(msg);
-						}catch (IOException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-					
-				};
-				t.start();
 		
-		// 设置滑动监听
+//<<<<<<<<<<<<<<<<--------设置滑动监听------->>>>>>>>>>>>>>>>>>    
 		mViewPager.setOnPageChangeListener(new OnPageChangeListener() {
 
 			// 某个页面被选中
@@ -176,7 +166,7 @@ public class MainActivity extends Activity {
 
 		tvTitle.setText(mImageDes[0]);// 初始化新闻标题
 
-		// 动态添加5个小圆点
+//<<<<<<<<<<<<<<<<--------动态添加5个小圆点------->>>>>>>>>>>>>>>>>>    
 		for (int i = 0; i < mImageIds.length; i++) {
 			ImageView view = new ImageView(this);
 			view.setImageResource(R.drawable.shape_point_selector);
@@ -194,7 +184,7 @@ public class MainActivity extends Activity {
 			llContainer.addView(view);
 		}
 
-		// 延时2秒更新广告条的消息
+//<<<<<<<<<<<<<<<<-------- 延时2秒更新广告条的消息------->>>>>>>>>>>>>>>>>>
 		mHandler.sendEmptyMessageDelayed(0, 3000);
 		mViewPager.setOnTouchListener(new OnTouchListener() {
 
@@ -217,37 +207,75 @@ public class MainActivity extends Activity {
 			}
 		});
 		
-		//listView 项目点击事件
+//<<<<<<<<<<<<<<<<--------listView 项目点击事件------->>>>>>>>>>>>>>>>>>
 		listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
-				// TODO Auto-generated method stub
-				switch(arg2){
-				case 0:
-					Intent intent = new Intent(MainActivity.this,WebView_xianshi.class);
-					startActivity(intent);
-					finish();
-			        break;
-				case 1:break;
-				case 2:break;
-				case 3:break;
-				case 4:break;
-				case 5:break;
-				case 6:break;
-				}
-				
+	
+				Intent intent = new Intent();
+                intent.setClass(MainActivity.this, WebView_xianshi.class);
+                TextView t = (TextView) arg1.findViewById(R.id.textwangzhi);
+                String URL =t.getText().toString();
+                intent.putExtra("key", URL);
+                startActivity(intent);
+                finish();
 			}
 		});
+	}
+	
+	
+//<<<<<<<<<<<<<<<<--------	获取网络数据------->>>>>>>>>>>>>>>>>>
+	public List<Map< String,Object>> getWebData(List<Map< String,Object>> list1){
 		
-		
-		
+		Thread t = new Thread(){
+			public void run(){
+				
+				List<Map< String,Object>> list=new ArrayList<Map< String,Object>>();
+				
+				int i=0;
+				Data data = new Data();
+				
+				Document doc;
+				try {
+					doc = (Document)Jsoup.connect(path).timeout(3000).get();
+					
+					Element element = doc.getElementById("xygg_div");
+					
+					Elements el = element.select("a");
+					
+					for(Element el0:el){
+						Map<String, Object> map = new HashMap<String, Object>();
+						String text=el0.text();
+						String link=el0.attr("href");
+						data.setlink(link);
+						data.setText(text);
+						map.put("up", data.getText());
+						map.put("href", data.getlink());
+						map.put("down", imageItem[i]);
+						i++;
+						list.add(map);
+					}
+					
+					Message msg = Message.obtain();
+					msg.what=1;
+					msg.obj=list;
+					mHandler.sendMessage(msg);
+				}catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		};
+		t.start();
+		return list1;
 	}
 	
 
 	
-	//ViewPager适配器
+//<<<<<<<<<<<<<<<<--------ViewPager适配器------->>>>>>>>>>>>>>>>>>	
 	class MyAdapter extends PagerAdapter {
 
 		// 返回item的个数
@@ -291,7 +319,7 @@ public class MainActivity extends Activity {
 
 	}
 	
-	
+//<<<<<<<<<<<<<<<<--------菜单设置------->>>>>>>>>>>>>>>>>>
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -302,16 +330,9 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-     //   int id = item.getItemId();
+        
         switch(item.getItemId()){
-        case R.id.action_jiaoxue:
-        	break;
-        case R.id.action_jiaowu:
-        	break;
-        case R.id.action_student:
+        case R.id.action_guanyu:
         	break;
         case R.id.action_settings:
         	finish();
@@ -323,7 +344,7 @@ public class MainActivity extends Activity {
 	
 }
 
-//加载数据用的ListView适配器
+//<<<<<<<<<<<<<<<<--------ListView适配器------->>>>>>>>>>>>>>>>>>加载数据用的ListView适配器
 @SuppressLint({ "ViewHolder", "InflateParams" }) class MyAdapterList extends BaseAdapter {
 	
 	List<Map< String,Object>> list;
@@ -331,7 +352,9 @@ public class MainActivity extends Activity {
 	ImageView image;
 	LayoutInflater mInflater;
 	//Context context;
-	
+	MyAdapterList(List<Map< String,Object>> list1){
+		this.list=list1;
+	}
 	
 	MyAdapterList(List<Map< String,Object>> list,Context context){
 		this.list=list;
@@ -358,16 +381,32 @@ public class MainActivity extends Activity {
 
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
 		// TODO Auto-generated method stub
-		View v = mInflater.inflate(R.layout.item, null);
-		
-		image = (ImageView) v.findViewById(R.id.image);
-		text1 = (TextView) v.findViewById(R.id.textMiaoshu);
-		
-		text1.setText((String)list.get(arg0).get("up"));
-		
-		image.setImageResource((Integer)list.get(arg0).get("down"));
-		return v;
+		ViewHolder holder = null;
+		if(arg1==null){
+			holder = new ViewHolder();
+			arg1 = mInflater.inflate(R.layout.item, null);
+			
+			holder.image = (ImageView) arg1.findViewById(R.id.image);
+			holder.text1 = (TextView) arg1.findViewById(R.id.textMiaoshu);
+			holder.text2 = (TextView) arg1.findViewById(R.id.textwangzhi);
+			arg1.setTag(holder);
+		}else {
+            holder = (ViewHolder) arg1.getTag();
+        }
+
+		holder.text1.setText((String)list.get(arg0).get("up"));
+		holder.text2.setText((String)list.get(arg0).get("href"));
+		holder.image.setImageResource((Integer)list.get(arg0).get("down"));
+		return arg1;
 	}
+	
+	class ViewHolder{
+
+        TextView text1,text2;
+        ImageView image ;
+    }
+
+	
 
 }
 

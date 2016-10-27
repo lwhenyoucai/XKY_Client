@@ -9,17 +9,29 @@
         android:layout_marginTop="5dp"
         android:layout_width="80dp"
         android:layout_height="80dp" />
-    
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="vertical">
 	    <TextView
 	        android:id="@+id/textMiaoshu"
 	        android:layout_marginTop="10dp"
 	        android:layout_width="match_parent"
-	        android:layout_height="75dp"
+	        android:layout_height="50dp"
 	        android:layout_marginLeft="5dp"
 	        android:maxLines="4"
 	        android:ellipsize="end"
 	       />
-	   
+	    <TextView
+	        android:id="@+id/textwangzhi"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dp"
+	        android:gravity="right"
+	        android:maxLines="4"
+	        android:ellipsize="end"
+	       />
+	 </LinearLayout> 
    
 
 </LinearLayout>

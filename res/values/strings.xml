@@ -3,9 +3,7 @@
 
     <string name="app_name">桂电信科院</string>
     <string name="hello_world">Hello world!</string>
-     <string name="action_jiaoxue">教学服务</string>
-      <string name="action_jiaowu">教务系统</string>
-       <string name="action_student">学生工作</string>
+       <string name="action_guanyu">关于</string>
     <string name="action_settings">退出</string>
 
 </resources>

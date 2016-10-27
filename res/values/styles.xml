@@ -2,7 +2,7 @@
 
    
     <!-- Application theme. -->
-    <style name="AppTheme" parent="AppBaseTheme">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
       
     </style>
 
